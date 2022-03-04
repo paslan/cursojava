@@ -16,7 +16,7 @@ public class CarroTest01 {
 
 
         carro1 = carro2;
-        
+
         System.out.println("Carro1-> "+carro1.nome+" modelo: "+carro1.modelo+" ano: "+carro1.ano);
         System.out.println("Carro2-> "+carro2.nome+" modelo: "+carro2.modelo+" ano: "+carro2.ano);
     }
