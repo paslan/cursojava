@@ -4,8 +4,8 @@ public class Funcionario {
     private String nome;
     private int idade;
     private double[] salario;
-    private double;
-    private double;
+    private double total;
+    private double media;
 
     public void imprimeDados() {
         if (salario == null) {
