@@ -1,16 +1,34 @@
 package site.cursojava.javacore.Hheranca.domain;
 
 public class Pessoa {
-    private String nome;
-    private String cpf;
-    private Endereco endereco;
+    protected String nome;
+    protected String cpf;
+    protected Endereco endereco;
 
+    static {
+        System.out.println("Dentro do bloco de inicialização estático Pessoa");
+    }
+    {
+        System.out.println("Bloco de inicialização não estatico Pessoa 1");
+    }
+    {
+        System.out.println("Bloco de inicialização não estatico Pessoa 2");
+    }
+
+    public Pessoa(String nome){
+        System.out.println("Dentro do construtor Pessoa");
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, String cpf){
+        this(nome);
+        this.cpf = cpf;
+    }
 
     public void imprime(){
         System.out.println(this.nome);
         System.out.println(this.cpf);
-        System.out.println(this.endereco.getRua());
-        System.out.println(this.endereco.getCep());
+        System.out.println(this.endereco.getRua()+" "+this.endereco.getCep());
     }
     public String getNome() {
         return nome;
